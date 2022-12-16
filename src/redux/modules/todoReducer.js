@@ -1,3 +1,4 @@
+//store의 state값
 const initialState = {
   List: [
     { id: 1, title: "리액트", body: "리액트 공부", isDone: false },
@@ -5,6 +6,7 @@ const initialState = {
   ],
 };
 
+//action creater
 const CREATE = "CREATE";
 export const create = (payload) => {
   return {
@@ -29,6 +31,7 @@ export const update = (payload) => {
   };
 };
 
+//reducer
 const todoReducer = (state = initialState, action) => {
   console.log(state.List);
   switch (action.type) {

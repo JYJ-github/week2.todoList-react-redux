@@ -3,6 +3,9 @@ import Delete from "../04.delete/Delete";
 import Update from "../05.update/Update";
 import "./Read.css";
 
+//useSelctor Hook을 사용하여 state를 가져와서
+//filter와 map method를 사용하여 읽고
+//store의 변화를 감지하여 자동으로 리렌더링이 되게끔 하였습니다.
 const Read = () => {
   const state = useSelector((state) => state.todoReducer.List);
   return (
