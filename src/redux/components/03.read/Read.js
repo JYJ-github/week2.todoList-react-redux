@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import Delete from "../04.delete/Delete";
-import Update from "../05.update/Update";
+import Update from "../04.update/Update";
+import Delete from "../05.delete/Delete";
 import "./Read.css";
 
 //useSelctor Hook을 사용하여 state를 가져와서

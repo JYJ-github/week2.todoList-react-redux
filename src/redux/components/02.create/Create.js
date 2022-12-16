@@ -4,7 +4,6 @@ import { create } from "../../modules/todoReducer";
 
 const Create = () => {
   const dispatch = useDispatch();
-
   const onSubmitHandler = (event) => {
     event.preventDefault();
     dispatch(
