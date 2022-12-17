@@ -33,7 +33,6 @@ export const update = (payload) => {
 
 //reducer
 const todoReducer = (state = initialState, action) => {
-  console.log(state.List);
   switch (action.type) {
     case CREATE:
       return { List: [...state.List, action.payload] };

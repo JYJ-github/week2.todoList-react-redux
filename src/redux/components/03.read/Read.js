@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import Update from "../04.update/Update";
 import Delete from "../05.delete/Delete";
 import "./Read.css";
@@ -8,6 +9,7 @@ import "./Read.css";
 //store의 변화를 감지하여 자동으로 리렌더링이 되게끔 하였습니다.
 const Read = () => {
   const state = useSelector((state) => state.todoReducer.List);
+
   return (
     <div>
       <h2>Working..!🔥</h2>
@@ -16,6 +18,7 @@ const Read = () => {
         .map((todo) => {
           return (
             <div key={todo.id} className="container-box1">
+              <Link to={`/${todo.id}`}>상세보기</Link>
               <h2>{todo.title}</h2>
               <div>{todo.body}</div>
               <Delete id={todo.id} />
@@ -30,6 +33,7 @@ const Read = () => {
         .map((todo) => {
           return (
             <div key={todo.id} className="container-box2">
+              <Link to={`/${todo.id}`}>상세보기</Link>
               <h2>{todo.title}</h2>
               <div>{todo.body}</div>
               <Delete id={todo.id} />
